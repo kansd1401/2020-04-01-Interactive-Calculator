@@ -1,4 +1,5 @@
 import React,{useState} from "react";
+import "./styles.scss"
 
 export default function GrowthInput(props) {
   const [value, setValue] = useState("");
@@ -10,7 +11,7 @@ export default function GrowthInput(props) {
           <div className="col-xs-4">
             <div className="input-group mb-3">
               <input
-                className="form-control"
+                className="form-control inputs"
                 name="value"
                 type="number"
                 placeholder="Initial Value"
@@ -22,7 +23,7 @@ export default function GrowthInput(props) {
           <div className="col-xs-4">
             <div className="input-group mb-3">
               <input
-                className="form-control"
+                className="form-control inputs"
                 aria-label="Username" 
                 aria-describedby="basic-addon1"
                 name="rate"
