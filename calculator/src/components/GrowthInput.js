@@ -5,6 +5,19 @@ export default function GrowthInput(props) {
   const [value, setValue] = useState("");
   const [rate, setRate] = useState("");
 
+  function submitData(){
+    const data = []
+    for(let i = 1;i <= 10;i++){
+      if (i === 1){
+        data.push(Number(value))
+      }
+      else{
+        data.push(data[i-2] + data[i-2]*(Number(rate)/100))
+      }
+    }
+    console.log(data)
+  }
+
   return (
       <div className="growth-input">
         <div className="row">
@@ -38,7 +51,7 @@ export default function GrowthInput(props) {
             </div>
           </div>
         </div>
-        <button className="btn btn-primary">Submit</button>
+        <button className="btn btn-primary" onClick={submitData}>Submit</button>
       </div>
   );
 }
